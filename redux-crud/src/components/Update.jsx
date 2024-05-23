@@ -29,12 +29,12 @@ const Update = () => {
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder={uname}
+          value={name}
           onChange={(e) => setName(e.target.value)}
         />
         <input
           type="text"
-          placeholder={uemail}
+          value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <input type="submit" />
