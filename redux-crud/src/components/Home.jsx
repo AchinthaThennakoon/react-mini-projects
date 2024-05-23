@@ -1,13 +1,13 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Home = () => {
   const users = useSelector((state) => state.users);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <div className="home">
-      <button onClick={()=>navigate("/create")}>create</button>
+      <button onClick={() => navigate("/create")}>create</button>
       <table>
         <thead>
           <tr>
@@ -24,7 +24,7 @@ const Home = () => {
               <td>{user.name}</td>
               <td>{user.email}</td>
               <td>
-                <button>edit</button>
+                <Link to={`/edit/${user.id}`}>edit</Link>
                 <button>delete</button>
               </td>
             </tr>
