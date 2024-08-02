@@ -1,8 +1,10 @@
+import  Nav from "./components/navbar/Nav.jsx";
+
 function App() {
   return (
-    <>
-      <div className="bg-red-400">my app</div>
-    </>
+    <main className="overflow-x-hidden bg-white text-dark">
+      <Nav />
+    </main>
   );
 }
 
